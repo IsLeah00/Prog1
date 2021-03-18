@@ -71,6 +71,7 @@ int main()
 
 
     Image loop {Point{0,0}, "loop.jpg"};
+    loop.set_mask(Point(100,100),100,100);
     win.attach(loop);
     win.wait_for_button();
 
