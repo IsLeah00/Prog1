@@ -57,9 +57,6 @@ public:
         else {os << P.weight << " kg\n";};
 
         cout << "BMI index: ";
-        float bmi;
-            bmi=(P.weight)/((P.height*P.height)*0.0001);
-        os << bmi << "\n";
 
 
     return os;
@@ -71,7 +68,10 @@ int main()
     Person P;
 
 	cin >> P;
-    cout << P;
+    	cout << P;
+	
+	auto bmi=[P]() {return P.weight/((P.height*P.height)*0.0001);};
+    	cout << bmi() << endl;
 
 return 0;
 }
